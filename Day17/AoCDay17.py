@@ -62,28 +62,19 @@ print('Part 1 alignment sum is:', alignment_sum)
 
 # Program required:
 
-line_1 = 'A/,/B/,/A/,/B/,/A/,/C/,/B/,/C/,/A,/C' # overall sequence.
-line_2 = 'L/,/10/,/L/,/12/,/R/,/6'
-line_3 = 'R/,/10/,/L/,/4/,/L/,/4/,/L/,/12'
-line_4 = 'L/,/10/,/R/,/10/,/R/,/6/,/L/,/4'
+line_1 = 'A , B , A , B , A , C , B , C , A, C' # overall sequence.
+line_2 = 'L , 10 , L , 12 , R , 6'
+line_3 = 'R , 10 , L , 4 , L , 4 , L , 12'
+line_4 = 'L , 10 , R , 10 , R , 6 , L , 4'
 
 def get_intcode_sequence(input):
     output = []        
-    for token in str.split(input, '/'):
-        if token == "L":
-            output.append(ord('L'))
-        elif token == "R":
-            output.append(ord('R'))
-        elif token == "A":
-            output.append(ord('A'))
-        elif token == "B":
-            output.append(ord('B'))
-        elif token == "C":
-            output.append(ord('C'))
-        elif token == ",":
-            output.append(ord(','))
+    
+    for token in str.split(input, ' '):
+        if token in ['L', 'R', 'A', 'B', 'C', ',']:
+            output.append(ord(token))
         else:
-            for c in token:
+            for c in token: 
                 output.append(ord(c))            
 
     output.append(10)
