@@ -73,5 +73,3 @@ print('Part 1 answer is',calculate_phase_n(phase_output,100))
 # Part 2
 
 print('Part 2 answer is',calculate_phase_n_pt2(phase_input, 100))
-
-
