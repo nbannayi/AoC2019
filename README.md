@@ -1,3 +1,3 @@
 # AoC2019
 
-My Advent of Code 2019 solutions written in Python.
+Advent of Code 2019 solutions written when I was learning Python.  It's a bit of a mess and needs cleaning up and improving at some point.
